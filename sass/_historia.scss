@@ -1,0 +1,24 @@
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+.contenido-adicional {
+    display: none;
+  }
+
+.contenido-adicional:target {
+    display: block;
+  }
+
+.leer-mas:target {
+    display: none;
+  }
+
+.leer-menos {
+    display: none;
+  }
+
+.contenido-adicional:target ~ .leer-menos {
+    display: inline;
+  }

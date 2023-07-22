@@ -1,0 +1,143 @@
+
+/* animación */
+@keyframes suspenso{
+    0% {
+        color: black;
+    }
+    50% {
+        color: pink;
+    }
+    100% {
+        color: black;
+    }
+}
+
+
+
+.siga{
+    font-size: 1em;
+    
+    margin-left: 4em;
+    margin-right: 4em;
+    color: black;
+
+
+    .leer-0:target {
+        display: none;
+      }
+    
+    .leer-mas {
+        display: none;
+      }
+    
+    .uno{
+        font-size: 75px;
+        display: none;       
+      }
+    .uno:target {
+        display: inline;  
+      }
+    .leer-mas:target {
+        display: none;
+      }
+    
+    .leer-2 {
+        display: none;
+      }
+    
+    .uno:target ~ .leer-2 {
+        display: inline;
+      }
+
+    .dos{
+        font-size: 75px;
+        display: none;
+    }
+    .dos:target {
+        display: inline;
+      }
+    
+    .leer-3 {
+        display: none;
+    
+      }
+    
+    .dos:target ~ .leer-3 {
+        display: inline;
+      }
+
+    .tres{
+        font-size: 75px;
+        display: none;
+      }
+    .tres:target {
+        display: inline;
+      }
+         
+    .leer-4 {
+        display: none;  
+      }
+    
+    .tres:target ~ .leer-4 {
+        display: inline;
+      }
+
+    .cuatro{
+        font-size: 75px;
+        display: none
+      }
+    .cuatro:target {
+        display: inline;
+          
+      }
+    
+
+    a{
+        text-decoration: none;
+        color: black;    
+    }
+    a:hover, a:focus{
+        text-decoration: line-through;
+        color: white;
+    }
+
+    .leer-0{
+        animation-name: suspenso;
+        animation-duration: 3s;
+        animation-delay: 0;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        
+    }
+   
+
+}
+
+/* efecto tooltip */
+.siga a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+  border-radius: 4px;
+  font-size: 50px;
+  white-space: nowrap;
+  z-index: 1;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.siga a[title]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
